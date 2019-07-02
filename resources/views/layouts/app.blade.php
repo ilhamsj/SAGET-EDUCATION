@@ -40,7 +40,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href=""> Kelas</a>
+                            <a class="nav-link" href="{{route('course.index')}}"> Kelas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href=""> Kegiatan</a>
