@@ -49,7 +49,7 @@
                 @for ($i = 0; $i < 4; $i++)
                     
                 <div class="col">
-                    <img src="{{Storage::url('images/team1.jpg')}}" class="img-fluid" alt="" srcset="">
+                    <img src="{{Storage::url('images/team1.jpg')}}" class="img-fluid rounded-circle" alt="" srcset="">
                     <h4><a href="">Arum Putri Sukmasari</a></h4>
                     <h5>CEO</h5>
                 </div>
