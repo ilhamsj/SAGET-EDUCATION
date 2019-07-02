@@ -14,7 +14,30 @@
                         </div>
                     @endif
 
-                    You are admin
+                    <form action="{{ route('admin.store') }}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" name="user_id" class="form-control" placeholder="User Id" value="{{ Auth::user()->id }}">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="title" class="form-control" placeholder="title">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="descriptions" class="form-control" placeholder="descriptions">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="xp" class="form-control" placeholder="xp">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="capacity" class="form-control" placeholder="capacity">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Save</button>
+                    </form>
                 </div>
             </div>
         </div>
