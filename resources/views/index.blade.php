@@ -14,12 +14,24 @@
     </section>
     
     <div class="row">
+
         <div class="col-sm-12 py-4 text-center">
             <h3>Kelas</h3>
+            <div class="row">
+                @foreach ($courses as $item)
+                <div class="col">
+                        {{ $item->title}}
+                        {{ $item->descriptions}}
+                        {{ $item->capacity}}
+                    </div>
+                @endforeach
+            </div>
         </div>
+        
         <div class="col-sm-12 py-4 text-center">
             <h3>Kegiatan</h3>
         </div>
+
         <div class="col-sm-12 py-4 text-center">
             <h3>Blog</h3>
         </div>
