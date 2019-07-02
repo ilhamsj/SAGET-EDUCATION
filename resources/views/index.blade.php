@@ -19,11 +19,19 @@
             <h3>Kelas</h3>
             <div class="row">
                 @foreach ($courses as $item)
-                <div class="col">
-                        {{ $item->title}}
-                        {{ $item->descriptions}}
-                        {{ $item->capacity}}
+                <div class="col-lg-4">
+                    <div class="card">
+                        <img src="{{Storage::url('images/team1.jpg')}}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h4>{{ $item->title}}</h4>
+                            {{ $item->descriptions}}
+                            {{ $item->capacity}}
+                        </div>
+                        <div class="card-footer">
+                            <a href="" class="btn btn-outline-primary">Ikuti Kelas</a>
+                        </div>
                     </div>
+                </div>
                 @endforeach
             </div>
         </div>
