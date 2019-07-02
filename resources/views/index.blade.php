@@ -26,13 +26,14 @@
         <div class="col-sm-12 py-4 text-center">
             <h3>Team</h3>
             <div class="row">
+                @for ($i = 0; $i < 4; $i++)
+                    
                 <div class="col">
-                    <h4>Arum Putri Sukmasari</h4>
+                    <img src="{{Storage::url('images/team1.jpg')}}" class="img-fluid" alt="" srcset="">
+                    <h4><a href="">Arum Putri Sukmasari</a></h4>
                     <h5>CEO</h5>
                 </div>
-                <div class="col">CEO</div>
-                <div class="col">CEO</div>
-                <div class="col">CEO</div>
+                @endfor
             </div>
         </div>
     </div>
