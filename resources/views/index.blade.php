@@ -15,13 +15,13 @@
     
     <div class="row">
 
-        <div class="col-sm-12 py-4 text-center">
+        <div class="col-sm-12 py-4">
             <h3>Kelas</h3>
             <div class="row">
                 @foreach ($courses as $item)
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="{{Storage::url('images/team1.jpg')}}" class="card-img-top" alt="">
+                        <img src="{{Storage::url('images/0.jpg')}}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h4>{{ $item->title}}</h4>
                             {{ $item->descriptions}}
