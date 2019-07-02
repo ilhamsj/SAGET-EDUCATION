@@ -32,6 +32,7 @@
                     <p>
                         {{ $item->descriptions}}
                     </p>
+                    <a href="" class="btn btn-primary btn-sm">Daftar Kelas</a>
                 </div>
             </div>
             <hr>
