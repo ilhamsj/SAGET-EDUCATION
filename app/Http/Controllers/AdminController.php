@@ -20,7 +20,6 @@ class AdminController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request);
         Course::create([
             'user_id' => $request->user_id,
             'title' => $request->title,
@@ -28,6 +27,9 @@ class AdminController extends Controller
             'xp' => $request->xp,
             'capacity' => $request->capacity,
         ]);
-        return redirect(route('admin.index'));
+
+        return redirect(route('course.index'))->with([
+            'status' => 'data berhasil ditambahkan'
+        ]);
     }
 }

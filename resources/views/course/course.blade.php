@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    @foreach ($courses as $item)
+                        {{ $item->title}}
+                        {{ $item->descriptions}}
+                        {{ $item->capacity}}
+                    @endforeach
                 </div>
             </div>
         </div>
