@@ -76,7 +76,7 @@
             @yield('content')
         </main>
 
-        <footer class="bg-dark text-white">
+        {{-- <footer class="bg-dark text-white">
             <div class="container">
                 <div class="row py-4 justify-content-center">
                     <div class="col-sm-6 mb-4 text-white">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> --}}
     </div>
 </body>
 </html>
