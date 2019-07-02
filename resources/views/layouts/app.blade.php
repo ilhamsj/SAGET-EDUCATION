@@ -75,6 +75,35 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="bg-dark text-white">
+            <div class="container">
+                <div class="row py-4 justify-content-center">
+                    <div class="col-sm-6 mb-4 text-white">
+                        <h1>Saget Education</h1>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi modi consequuntur, distinctio culpa pariatur, quisquam unde fugit iusto accusamus numquam. Sit error illo omnis illum consequuntur, non magnam ratione. <br/>
+
+                    </div>
+                    <div class="col-sm-3 mb-4">
+                        <h3>Lainnya</h3>      
+                        <a href="">Tentang Kami</a> <br>
+                        <a href="">Karir</a> <br>
+                        <a href="">Bantuan</a> <br>
+                        <a href="">Kontak Kami</a>
+                    </div>
+                    
+                    <div class="col-sm-3 mb-4">
+                        <h3>Follow Us</h3>
+                        <a href=""><i class="fab fa-facebook"></i></a> 
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-sm-12 mb-4">
+                        Made with <i class="fas fa-heart"></i> in yogyakarta
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
