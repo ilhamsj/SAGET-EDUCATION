@@ -28,8 +28,17 @@ class AdminController extends Controller
 
     public function store(Request $request)
     {
-        $request->file('image')->store('images', 'public');
+        $request->validate([
+            'user_id'       => 'required',
+            'title'         => 'required',
+            'descriptions'  => 'required',
+            'xp'            => 'required',
+            'capacity'      => 'required',
+            'image'         => 'required|image',
+        ]);
 
+        $request->file('image')->store('images', 'public');
+        
         Course::create([
             'user_id' => $request->user_id,
             'title' => $request->title,
@@ -39,7 +48,7 @@ class AdminController extends Controller
             'image' => $request->file('image')->hashName(),
         ]);
 
-        return redirect(route('admin.course'))->with([
+        return redirect(route('admin.index'))->with([
             'status' => 'data berhasil ditambahkan'
         ]);
     }

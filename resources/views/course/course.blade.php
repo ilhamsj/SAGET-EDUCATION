@@ -19,7 +19,7 @@
             @foreach ($courses as $item)
             <div class="row mb-4 bordered">
                 <div class="col-sm-5">
-                    <img src="{{Storage::url('images/0.jpg')}}" alt="" class="img-fluid" srcset="">
+                    <img src="{{Storage::url('images/'.$item->image)}}" alt="" class="img-fluid" srcset="">
                 </div>
 
                 <div class="col-sm">

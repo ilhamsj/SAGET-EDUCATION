@@ -12,5 +12,6 @@ class Course extends Model
         'descriptions',
         'xp',
         'capacity',
+        'image',
     ];
 }
