@@ -5,7 +5,7 @@
     <section class="jumbotron text-center bg-transparent">
             <h1 class="">Saget Education</h1>
             <h2 class="">
-                "Kami adalah Lembaga Bimbingan belajar yang berbasis teknologi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia molestiae optio omnis architecto quo laudantium debitis"
+                "Kami adalah Bimbingan belajar yang berbasis teknologi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia molestiae optio omnis architecto quo laudantium debitis"
             </h2>
             @guest
                 <a href="" class="btn btn-outline-primary">Masuk</a>

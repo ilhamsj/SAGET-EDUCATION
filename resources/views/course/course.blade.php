@@ -13,7 +13,7 @@
         <div class="col-md-8 text-center">
             <h3>Kelas</h3>
             <h4 class="display-4">
-                "Kegiatan Kami dari sabang sampai merauka membawa kontribusi untuk pendidikan diindonesia"
+                "Daftar kelas dan dapatkan SP"
             </h4>
             <hr>
         </div>
