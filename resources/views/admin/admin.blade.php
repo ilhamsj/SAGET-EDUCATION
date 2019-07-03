@@ -3,7 +3,30 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-sm-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">XP</th>
+                        <th scope="col">Capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($courses as $item)
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{ $item->title }}</td>
+                        <td>{{ $item->xp }}</td>
+                        <td>{{ $item->capacity }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{ $courses->links() }}
+        </div>
+        <div class="col-sm">
             <div class="card">
                 <div class="card-header">Course</div>
 

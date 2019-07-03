@@ -15,7 +15,10 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.admin');
+        $courses = Course::paginate('5');
+        return view('admin.admin')->with([
+            'courses' => $courses
+        ]);
     }
 
     public function store(Request $request)
