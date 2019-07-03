@@ -48,11 +48,11 @@
                             <a class="nav-link" href="{{route('course.index')}}"> Kelas</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{route('blog.index')}}"> Blog</a>
+                        </li>
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href=""> Kegiatan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""> Blog</a>
-                        </li>
+                        </li> --}}
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
