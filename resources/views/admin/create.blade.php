@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('admin.store') }}" method="post">
+                    <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <input type="text" name="user_id" class="form-control" placeholder="User Id" value="{{ Auth::user()->id }}">
@@ -34,6 +34,13 @@
 
                         <div class="form-group">
                             <input type="text" name="capacity" class="form-control" placeholder="capacity">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" name="image" class="custom-file-input">
+                                <label class="custom-file-label" for="image">Choose Image</label>
+                            </div>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block">Save</button>

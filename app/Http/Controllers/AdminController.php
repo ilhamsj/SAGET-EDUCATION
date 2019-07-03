@@ -28,12 +28,15 @@ class AdminController extends Controller
 
     public function store(Request $request)
     {
+        $request->file('image')->store('images', 'public');
+
         Course::create([
             'user_id' => $request->user_id,
             'title' => $request->title,
             'descriptions' => $request->descriptions,
             'xp' => $request->xp,
             'capacity' => $request->capacity,
+            'image' => $request->file('image')->hashName(),
         ]);
 
         return redirect(route('admin.course'))->with([
