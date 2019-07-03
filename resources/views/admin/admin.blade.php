@@ -33,7 +33,7 @@
                                     Action
                                 </a>
                                 
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="{{ route('admin.edit', $item->id) }}">Edit</a>
                                     <form action="{{ route('admin.destroy', $item->id) }}" method="post">
                                         @csrf
@@ -72,7 +72,7 @@
                                     Action
                                 </a>
                                 
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="{{ route('blog.edit', $item->id) }}">Edit</a>
                                     <form action="{{ route('blog.destroy', $item->id) }}" method="post">
                                         @csrf
@@ -87,6 +87,51 @@
                 </tbody>
             </table>
         </div>
+        <div class="col-sm">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">User</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Tanggal Pendaftaran</th>
+                        <th scope="col">
+                            <a href="{{ route('admin.create') }}">Add New</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($users as $item)
+                    <tr>
+                        <td>
+                            <a href="{{ route('course.show', $item->id) }}">{{ $item->name }}</a>
+                        </td>
+                        <td>
+                            <a href="{{ route('course.show', $item->id) }}">{{ $item->email }}</a>
+                        </td>
+                        <td>
+                            <a href="{{ route('course.show', $item->id) }}">{{ $item->created_at }}</a>
+                        </td>
+                        <td>
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle btn-sm" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action
+                                </a>
+                                
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('blog.edit', $item->id) }}">Edit</a>
+                                    <form action="{{ route('blog.destroy', $item->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="dropdown-item">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>  
     </div>
 </div>
 @endsection
