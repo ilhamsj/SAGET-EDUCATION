@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Course;
 use Auth\User;
+use App\Course;
+use App\Blog;
 
 class AdminController extends Controller
 {
@@ -16,8 +17,13 @@ class AdminController extends Controller
     public function index()
     {
         $courses = Course::paginate('5');
+        $blogs = Blog::paginate('5');
+        $courses = Course::all();
+        $blogs = Blog::all();
+
         return view('admin.admin')->with([
-            'courses' => $courses
+            'courses' => $courses,
+            'blogs' => $blogs,
         ]);
     }
 

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('blog.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <input type="text" name="user_id" class="form-control" placeholder="User Id" value="{{ Auth::user()->id }}">
@@ -26,14 +26,6 @@
 
                         <div class="form-group">
                             <textarea name="descriptions" id="" class="form-control" cols="30" rows="10" placeholder="descriptions"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="xp" class="form-control" placeholder="xp">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="capacity" class="form-control" placeholder="capacity">
                         </div>
 
                         <div class="input-group mb-3">

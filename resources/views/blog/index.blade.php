@@ -19,7 +19,7 @@
         </div>
 
         <div class="col-md-8">
-            @foreach ($courses as $item)
+            @foreach ($blog as $item)
             <div class="row mb-4 bordered">
                 
                 <div class="col-sm">

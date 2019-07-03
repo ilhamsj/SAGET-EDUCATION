@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('admin.update', $item->id) }}" method="post">
+                    <form action="{{ route('blog.update', $item->id) }}" method="post">
                         @csrf
                         @method('PUT')
 
@@ -28,14 +28,6 @@
 
                         <div class="form-group">
                             <textarea name="descriptions" id="" class="form-control" cols="30" rows="10" placeholder="descriptions">{{ $item->descriptions }}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="xp" class="form-control" placeholder="xp" value="{{ $item->xp }}">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="capacity" class="form-control" placeholder="capacity" value="{{ $item->capacity }}">
                         </div>
 
                         <button type="submit" class="btn btn-success btn-block">Update</button>

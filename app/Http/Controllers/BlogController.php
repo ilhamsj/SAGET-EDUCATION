@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Course;
+use App\Blog;
 
 class BlogController extends Controller
 {
@@ -14,9 +14,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
+        $blog = Blog::all();
         return view('blog.index')->with([
-            'courses' => $courses
+            'blog' => $blog
         ]);
     }
 
@@ -27,7 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blog.create');
     }
 
     /**
@@ -38,7 +38,25 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'user_id'       => 'required',
+            'title'         => 'required',
+            'descriptions'  => 'required',
+            'image'         => 'required|image',
+        ]);
+
+        $request->file('image')->store('images', 'public');
+        
+        Blog::create([
+            'user_id' => $request->user_id,
+            'title' => $request->title,
+            'descriptions' => $request->descriptions,
+            'image' => $request->file('image')->hashName(),
+        ]);
+
+        return redirect(route('blog.index'))->with([
+            'status' => 'data berhasil ditambahkan'
+        ]);
     }
 
     /**
@@ -49,7 +67,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $item = Course::find($id);
+        $item = Blog::find($id);
         return view('blog.show')->with(['item' => $item]);
     }
 
@@ -61,7 +79,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Blog::find($id);
+        return view('admin.blog.edit')->with(['item' => $item]);
     }
 
     /**
@@ -73,7 +92,16 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item = Blog::find($id);
+        $item->user_id        = $request->user_id;
+        $item->title          = $request->title;
+        $item->descriptions   = $request->descriptions;
+        $item->save();
+
+
+        return redirect(route('admin.index'))->with([
+            'status' => 'data berhasil di update'
+        ]);
     }
 
     /**
@@ -84,6 +112,9 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Blog::destroy($id);
+        return redirect(route('admin.index'))->with([
+            'status' => 'data berhasil dihapus'
+        ]);
     }
 }
