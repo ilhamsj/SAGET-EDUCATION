@@ -23,7 +23,7 @@
                     <div class="card">
                         <img src="{{Storage::url('images/0.jpg')}}" class="card-img-top" alt="">
                         <div class="card-body">
-                            <h4>{{ $item->title}}</h4>
+                            <h4><a href="{{ route('course.show', $item->id) }}">{{ $item->title}}</a></h4>
                             {{ $item->descriptions}}
                             {{ $item->capacity}}
                         </div>

@@ -21,6 +21,11 @@ class AdminController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('admin.create');
+    }
+
     public function store(Request $request)
     {
         Course::create([
@@ -31,8 +36,45 @@ class AdminController extends Controller
             'capacity' => $request->capacity,
         ]);
 
-        return redirect(route('course.index'))->with([
+        return redirect(route('admin.course'))->with([
             'status' => 'data berhasil ditambahkan'
+        ]);
+    }
+
+    public function edit($id)
+    {
+        $item = Course::find($id);
+        return view('admin.edit')->with(['item' => $item]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $course = Course::find($id);
+        $course->user_id        = $request->user_id;
+        $course->title          = $request->title;
+        $course->descriptions   = $request->descriptions;
+        $course->xp             = $request->xp;
+        $course->capacity       = $request->capacity;
+        $course->save();
+
+        // $course = Course::firstOrNew(
+        //     ['user_id' => $request->user_id],
+        //     ['title' => $request->user_title],
+        //     ['descriptions' => $request->descriptions],
+        //     ['xp' => $request->xp],
+        //     ['capacity' => $request->capacity]
+        // );
+
+        return redirect(route('admin.index'))->with([
+            'status' => 'data berhasil ditambahkan'
+        ]);
+    }
+
+    public function destroy($id)
+    {
+        Course::destroy($id);
+        return redirect(route('admin.index'))->with([
+            'status' => 'data berhasil dihapus'
         ]);
     }
 }

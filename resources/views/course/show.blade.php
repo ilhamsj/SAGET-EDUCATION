@@ -10,15 +10,9 @@
     @endif
 
     <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-            <h3>Kelas</h3>
-            <hr>
-        </div>
-
         <div class="col-md-8">
-            @foreach ($courses as $item)
             <div class="row mb-4 bordered">
-                <div class="col-sm-5">
+                <div class="col-sm-12 mb-4">
                     <img src="{{Storage::url('images/0.jpg')}}" alt="" class="img-fluid" srcset="">
                 </div>
 
@@ -26,17 +20,18 @@
                     <h4>
                         <a href="{{ route('course.show', $item->id) }}">{{ $item->title}}</a>
                     </h4>
-                    <span class="badge badge-success">
-                        You will get {{ $item->capacity}} XP
+                    <span class="badge badge-primary">
+                            You will get {{ $item->xp}} XP
                     </span>
+                    
                     <p>
+                        <h5>What you will learn ?</h5>
                         {{ $item->descriptions}}
                     </p>
                     <a href="" class="btn btn-primary btn-sm">Daftar Kelas</a>
                 </div>
             </div>
             <hr>
-            @endforeach
         </div>
     </div>
 </div>

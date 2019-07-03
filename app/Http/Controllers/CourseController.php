@@ -49,7 +49,8 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = Course::find($id);
+        return view('course.show')->with(['item' => $item]);
     }
 
     /**
