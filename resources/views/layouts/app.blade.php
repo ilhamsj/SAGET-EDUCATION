@@ -113,6 +113,7 @@
                         <a href=""><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="col-sm-12 mb-4">
+                        Karya anak bangsa <br/>
                         Made with <i class="fas fa-heart"></i> in yogyakarta
                     </div>
                 </div>

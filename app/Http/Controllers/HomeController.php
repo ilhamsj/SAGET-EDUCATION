@@ -24,8 +24,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        // $courses = Course::all();
-        $courses = Course::paginate(3);
+        $courses = Course::all();
+        // $courses = Course::paginate(3);
         return view('index')->with([
             'courses' => $courses
         ]);

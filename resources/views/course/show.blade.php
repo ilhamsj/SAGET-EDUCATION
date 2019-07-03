@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="col-sm">
-                    <h4>
+                    <h4 class="display-3">
                         <a href="{{ route('course.show', $item->id) }}">{{ $item->title}}</a>
                     </h4>
                     <span class="badge badge-primary">
@@ -25,7 +25,7 @@
                     </span>
                     
                     <p>
-                        <h5>What you will learn ?</h5>
+                        <h5 class="display-4">What you will learn ?</h5>
                         {{ $item->descriptions}}
                     </p>
                     <a href="" class="btn btn-primary btn-sm">Daftar Kelas</a>

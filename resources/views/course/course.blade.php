@@ -12,6 +12,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
             <h3>Kelas</h3>
+            <h4 class="display-4">
+                "Kegiatan Kami dari sabang sampai merauka membawa kontribusi untuk pendidikan diindonesia"
+            </h4>
             <hr>
         </div>
 
@@ -26,11 +29,14 @@
                     <h4>
                         <a href="{{ route('course.show', $item->id) }}">{{ $item->title}}</a>
                     </h4>
+                    <span class="badge badge-warning">
+                        {{ $item->capacity}} Seat Available
+                    </span>
                     <span class="badge badge-success">
-                        You will get {{ $item->capacity}} XP
+                        You will get {{ $item->xp}} XP
                     </span>
                     <p>
-                        {{ $item->descriptions}}
+                        {{ str_limit($item->descriptions, 100) }}
                     </p>
                     <a href="" class="btn btn-primary btn-sm">Daftar Kelas</a>
                 </div>
