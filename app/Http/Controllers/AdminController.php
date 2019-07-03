@@ -13,6 +13,7 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('admin');
     }
 
     public function index()
@@ -75,14 +76,6 @@ class AdminController extends Controller
         $course->xp             = $request->xp;
         $course->capacity       = $request->capacity;
         $course->save();
-
-        // $course = Course::firstOrNew(
-        //     ['user_id' => $request->user_id],
-        //     ['title' => $request->user_title],
-        //     ['descriptions' => $request->descriptions],
-        //     ['xp' => $request->xp],
-        //     ['capacity' => $request->capacity]
-        // );
 
         return redirect(route('admin.index'))->with([
             'status' => 'data berhasil ditambahkan'

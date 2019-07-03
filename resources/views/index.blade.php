@@ -8,8 +8,8 @@
                 "Kami adalah Bimbingan belajar yang berbasis teknologi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia molestiae optio omnis architecto quo laudantium debitis"
             </h2>
             @guest
-                <a href="" class="btn btn-outline-primary">Masuk</a>
-                <a href="" class="btn btn-outline-secondary">Daftar</a>
+                <a href="{{ route('login') }}" class="btn btn-outline-primary">Masuk</a>
+                <a href="{{ route('register') }}" class="btn btn-outline-secondary">Daftar</a>
             @endguest
     </section>
     

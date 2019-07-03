@@ -42,13 +42,10 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('admin.index')}}"> Admin</a>
+                            <a class="nav-link" href="{{route('blog.index')}}"> Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('course.index')}}"> Kelas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('blog.index')}}"> Blog</a>
                         </li>
                         {{-- <li class="nav-item">
                             <a class="nav-link" href=""> Kegiatan</a>
