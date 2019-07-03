@@ -13,9 +13,10 @@
         <div class="col-md-8">
             <div class="row mb-4 bordered">
                 <div class="col-sm-12 mb-4">
-                        <h4 class="display-4">
-                                {{ $item->title}}
-                            </h4>
+                        {{ $item->created_at}}
+                        <h3>
+                            {{ $item->title}}
+                        </h3>
                             <hr>
                 </div>
 

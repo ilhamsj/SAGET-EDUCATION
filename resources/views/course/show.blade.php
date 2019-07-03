@@ -17,15 +17,15 @@
                 </div>
 
                 <div class="col-sm">
-                    <h4 class="display-3">
-                        <a href="{{ route('course.show', $item->id) }}">{{ $item->title}}</a>
-                    </h4>
-                    <span class="badge badge-primary">
-                            You will get {{ $item->xp}} XP
+                    <p>{{ $item->created_at}} XP</p>
+                    <span class="badge badge-success">
+                        You will get {{ $item->xp}} XP
                     </span>
-                    
+                    <h3>
+                        {{ $item->title}}
+                    </h3>
+
                     <p>
-                        <h5 class="display-4">What you will learn ?</h5>
                         {{ $item->descriptions}}
                     </p>
                     <a href="" class="btn btn-primary btn-sm">Daftar Kelas</a>
