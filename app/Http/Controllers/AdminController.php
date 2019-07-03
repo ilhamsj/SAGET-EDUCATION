@@ -23,7 +23,7 @@ class AdminController extends Controller
 
     public function create()
     {
-        return view('admin.create');
+        return view('admin.course.create');
     }
 
     public function store(Request $request)
@@ -56,7 +56,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $item = Course::find($id);
-        return view('admin.edit')->with(['item' => $item]);
+        return view('admin.course.edit')->with(['item' => $item]);
     }
 
     public function update(Request $request, $id)
