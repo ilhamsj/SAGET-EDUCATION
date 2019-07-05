@@ -38,7 +38,7 @@
                     <p>
                         {{ str_limit($item->descriptions, 100) }}
                     </p>
-                    <a href="" class="btn btn-primary btn-sm">Daftar Kelas</a>
+                    <a href="https://wa.me/6289666445551?text=Hello%20saya%20mau%20daftar%20kelas" class="btn btn-primary btn-sm" target="_blank">Daftar Kelas</a>
                 </div>
             </div>
             <hr>
