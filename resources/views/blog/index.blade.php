@@ -11,18 +11,17 @@
 
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-            <h3>Kelas</h3>
-            <h4 class="display-4">
-                "Menulis dengan Mimpi"
-            </h4>
+            <h3>Menulis dengan Mimpi</h3>
+                
             <hr>
         </div>
 
         <div class="col-md-8">
             @foreach ($blog as $item)
-            <div class="row mb-4 bordered">
                 
+            <div class="row mb-4 bordered">
                 <div class="col-sm">
+                    Oleh : <u>{{ $item->user->name }}</u> | at {{$item->created_at}}
                     <h4>
                         <a href="{{ route('blog.show', $item->id) }}">{{ $item->title}}</a>
                     </h4>

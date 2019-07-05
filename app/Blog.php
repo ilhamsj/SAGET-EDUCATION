@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+// use App\User;
 
 class Blog extends Model
 {
@@ -12,4 +13,9 @@ class Blog extends Model
         'descriptions',
         'image',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
