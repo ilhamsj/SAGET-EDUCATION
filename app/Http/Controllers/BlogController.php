@@ -7,6 +7,12 @@ use App\Blog;
 
 class BlogController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth')->only('create');
+
+        // only admin can post
+        $this->middleware('admin')->only('create');
+    }
     /**
      * Display a listing of the resource.
      *
