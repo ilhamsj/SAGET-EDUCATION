@@ -11,10 +11,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-            <h3>Kelas</h3>
-            <h4 class="display-4">
-                "Daftar kelas dan dapatkan SP"
-            </h4>
+            <h3>Daftar kelas dan dapatkan Saget Point</h3>
             <hr>
         </div>
 

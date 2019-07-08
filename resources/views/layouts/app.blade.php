@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/saget-on.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -86,7 +87,7 @@
             </div>
         </nav>
 
-        <main class="py-4" style="min-height:100vh">
+        <main class="" style="min-height:100vh">
             @yield('content')
         </main>
 
@@ -99,7 +100,7 @@
 
                     </div>
                     <div class="col-sm-3 mb-4">
-                        <h3>Lainnya</h3>      
+                        <h3>La  innya</h3>      
                         <a href="">Tentang Kami</a> <br>
                         <a href="">Karir</a> <br>
                         <a href="">Bantuan</a> <br>
@@ -112,7 +113,7 @@
                         <a href=""><i class="fab fa-twitter-square"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
                     </div>
-                    <div class="col-sm-12 mb-4">
+                    <div class="col-sm-12">
                         Karya anak bangsa <br/>
                         Made with <i class="fas fa-heart"></i> in yogyakarta
                     </div>
