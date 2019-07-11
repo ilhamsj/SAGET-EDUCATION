@@ -14,7 +14,19 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Hi <b>{{ Auth::user()->name }}</b> selamat datang di saget education
+                    <hr>
+                    Mulai Belajar
+                    <h3>
+                        <a href="{{ route('course.index') }}">Kelas</a>
+                    </h3>
+
+                    <hr>
+                    Kegiatan | Coming soon
+                    <h3>
+                        Saget Road to School
+                    </h3>
+
                 </div>
             </div>
         </div>

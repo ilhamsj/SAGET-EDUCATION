@@ -8,7 +8,7 @@
             <a href="{{ route('admin.create') }}">New Course</a>
         </div>
         <div class="col-sm-6">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive">
                 <thead>
                     <tr>
                         <th scope="col">Title</th>
@@ -51,12 +51,12 @@
         {{-- end course --}}
 
         <div class="col-sm">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive">
                 <thead>
                     <tr>
                         <th scope="col">Title</th>
                         <th scope="col">
-                            <a href="{{ route('admin.create') }}">Add New</a>
+                            <a href="{{ route('blog.create') }}">Add New</a>
                         </th>
                     </tr>
                 </thead>
@@ -64,7 +64,7 @@
                     @foreach ($blogs as $item)
                     <tr>
                         <td>
-                            <a href="{{ route('course.show', $item->id) }}">{{ $item->title }}</a>
+                            <a href="{{ route('blog.show', $item->id) }}">{{ $item->title }}</a>
                         </td>
                         <td>
                             <div class="dropdown show">
@@ -88,7 +88,7 @@
             </table>
         </div>
         <div class="col-sm">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive">
                 <thead>
                     <tr>
                         <th scope="col">User</th>
@@ -103,13 +103,13 @@
                     @foreach ($users as $item)
                     <tr>
                         <td>
-                            <a href="{{ route('course.show', $item->id) }}">{{ $item->name }}</a>
+                            {{ $item->name }}
                         </td>
                         <td>
-                            <a href="{{ route('course.show', $item->id) }}">{{ $item->email }}</a>
+                            {{ $item->email }}
                         </td>
                         <td>
-                            <a href="{{ route('course.show', $item->id) }}">{{ $item->created_at }}</a>
+                            {{ $item->created_at }}
                         </td>
                         <td>
                             <div class="dropdown show">
