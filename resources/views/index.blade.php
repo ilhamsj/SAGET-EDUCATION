@@ -5,8 +5,8 @@
             <h1 class="">Saget Education</h1>
             <h2 class="">
                 "Smart Generation Education
-                Kami adalah Bimbingan belajar yang mempunyai tujuan untuk 
-                membimbing siswa yang mengalami kesulitan belajar, dengan metode pembelajaran berbasis Techno-Socio.
+                Kami adalah Bimbingan belajar yang mempunyai misi untuk 
+                membantu siswa yang mengalami kesulitan belajar, dengan metode pembelajaran berbasis Techno-Socio.
             </h2>
             @guest
                 <a href="{{ route('login') }}" class="btn btn-outline-primary">Masuk</a>
@@ -94,7 +94,11 @@
                         'https://instagram.fkno3-1.fna.fbcdn.net/vp/d418e3b9993dfc577ae061647c47ed64/5DBDDCF7/t51.2885-19/s150x150/32377361_164431597557510_8137286884867964928_n.jpg?_nc_ht=instagram.fkno3-1.fna.fbcdn.net&_nc_cat=106',
                         'https://instagram.fkno3-1.fna.fbcdn.net/vp/6a1a4bade53a6e2a3553dbc944efd14f/5DC0F0A0/t51.2885-19/s150x150/17125511_256904888091846_6270298686157225984_a.jpg?_nc_ht=instagram.fkno3-1.fna.fbcdn.net&_nc_cat=106',
                         'https://instagram.fkno3-1.fna.fbcdn.net/vp/13c82e20cc339bf7bd66d5cbb0086d0e/5DC4A988/t51.2885-19/s150x150/64256969_1172943679756681_7273843650570747904_n.jpg?_nc_ht=instagram.fkno3-1.fna.fbcdn.net&_nc_cat=101',
-                    ]
+                    ];
+                    
+                    $socialUrl = [
+                        'facebook.com/ilhamspace'
+                    ];
                 @endphp
 
                 <div class="col-sm-12 py-4 text-center">
@@ -102,11 +106,11 @@
 
                     <div class="row">
                         @for ($i = 0; $i < count($team); $i++)
-                            <div class="col-sm">
+                            <div class="col-sm mb-4">
                                 {{-- <img src="{{Storage::url('images/team1.jpg')}}" class="img-fluid rounded-circle mb-4" alt="" srcset=""> --}}
                             <img src="{{$imageUrl[$i] }}" class="img-fluid rounded-circle mb-4" alt="" srcset="">
                                 <h4>
-                                    <a href="">{{$team[$i]}}</a>
+                                    <a href="https://www.facebook.com/ilhamspace/">{{$team[$i]}}</a>
                                 </h4>
                                 <p>
                                     {{$quote[$i]}}
