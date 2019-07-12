@@ -1,53 +1,23 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-header">Course</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <form action="{{ route('admin.store') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group">
-                            <input type="text" name="user_id" class="form-control" placeholder="User Id" value="{{ Auth::user()->id }}">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="title" class="form-control" placeholder="title">
-                        </div>
-
-                        <div class="form-group">
-                            <textarea name="descriptions" id="" class="form-control" cols="30" rows="10" placeholder="descriptions"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="xp" class="form-control" placeholder="xp">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="capacity" class="form-control" placeholder="capacity">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="custom-file">
-                                <input type="file" name="image" class="custom-file-input">
-                                <label class="custom-file-label" for="image">Choose Image</label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">Save</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>bootstrap4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+  </head>
+  <body>
+    <div id="summernote"></div>
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+  </body>
+</html>
